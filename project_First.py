@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-from streamlit_folium import folium,folium_static
+import folium
+from streamlit_folium import folium_static
 
 # Load Data
 def load_data():
