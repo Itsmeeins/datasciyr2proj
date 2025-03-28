@@ -19,14 +19,15 @@ cluster_colors = {
     3: "#800080"   # Dark Purple
 }
 
-# Define property types based on clusters
+# Define property types based on KMeans clusters (อิงจาก insight ล่าสุด)
 property_types = {
     "All": "ทั้งหมด",
-    "Cluster 0": "แฟลตราคาถูก / บ้านราคาถูกมาก",
-    "Cluster 3": "บ้านราคาถูก",
-    "Cluster 2": "อพาร์ตเมนต์ / ทาวน์โฮม",
-    "Cluster 1": "คอนโดมิเนียม / บ้านเดี่ยว"
+    "Cluster 0": "บ้านราคาถูกมาก / ไม่แนะนำลงทุน",
+    "Cluster 1": "คอนโด / ทาวน์โฮม",
+    "Cluster 2": "บ้านเดี่ยว / โครงการครบวงจร",
+    "Cluster 3": "บ้านราคาถูก / ร่วมรัฐ"
 }
+
 
 # Streamlit UI
 st.title("Housing Investment Clustering Map")
@@ -89,20 +90,21 @@ legend_html = """
 <div style="display: flex; flex-wrap: wrap; gap: 15px;">
     <div style="display: flex; align-items: center;">
         <div style="width: 20px; height: 20px; background-color: #8B0000; margin-right: 10px;"></div>
-        <span>Cluster 0: แฟลตราคาถูก / บ้านราคาถูกมาก</span>
+        <span>Cluster 0: บ้านราคาถูกมาก / ไม่แนะนำลงทุน</span>
     </div>
     <div style="display: flex; align-items: center;">
         <div style="width: 20px; height: 20px; background-color: #006400; margin-right: 10px;"></div>
-        <span>Cluster 1: คอนโดมิเนียม / บ้านเดี่ยว</span>
+        <span>Cluster 1: คอนโด / ทาวน์โฮม</span>
     </div>
     <div style="display: flex; align-items: center;">
         <div style="width: 20px; height: 20px; background-color: #B8860B; margin-right: 10px;"></div>
-        <span>Cluster 2: อพาร์ตเมนต์ / ทาวน์โฮม</span>
+        <span>Cluster 2: บ้านเดี่ยว / โครงการครบวงจร</span>
     </div>
     <div style="display: flex; align-items: center;">
         <div style="width: 20px; height: 20px; background-color: #800080; margin-right: 10px;"></div>
-        <span>Cluster 3: บ้านราคาถูก</span>
+        <span>Cluster 3: บ้านราคาถูก / โครงการร่วมรัฐ</span>
     </div>
 </div>
 """
+
 st.markdown(legend_html, unsafe_allow_html=True)
