@@ -13,10 +13,10 @@ df = load_data()
 
 # Define darker cluster colors
 cluster_colors = {
-    0: "#8B0000",  # Dark Red
-    1: "#006400",  # Dark Green
-    2: "#B8860B",  # Dark Goldenrod
-    3: "#800080"   # Dark Purple
+    "Cluster 0": "#8B0000",
+    "Cluster 1": "#006400",
+    "Cluster 2": "#B8860B",
+    "Cluster 3": "#800080"
 }
 
 # Define property types based on KMeans clusters (อิงจาก insight ล่าสุด)
